@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+@font-face{
+    font-family:'Bakery';
+    src: url('../resources/fonts/bakery.ttf');
+}
+
+/* Styles section header */
+.header{
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px;
+    /* position: fixed; */
+    z-index: 80;
+    width: 100%;
+    height: 100px;
+}
+.header__logo-container img{
+    width: 250px;
+    height: 100px;
+    object-fit: contain;
+}
+.header__menu,
+.header__menu ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 450px;
+    justify-content: space-evenly;
+}
+.header__menu ul li a{
+    color: white;
+    font-weight: 600;
+}
+.header__menu ul li:last-child a{
+    color: #148ec0;
+}
+
+.main{
+    position: relative;
+}
+
+/* Styles section Hero */
+.hero{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero__img-container,
+.hero__img-container img{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../resources/imgs/hero_2.jpg');
+    background-size: cover;
+}
+.hero__img-container img::before
+{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.75);
+}
+
+.hero__desc-container{
+    position: absolute;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero__desc-container h1{
+    font-family: 'Sacramento', cursive;
+    font-size: 72px;
+    text-align: center;
+}
+.hero__desc-container h2{
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.hero__desc-container a{
+    color: white;
+    width: 180px;
+    background-color: #148ec0;
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 18px;
+}
+
+/* Styles section courses */
+.courses{
+    width: 100%;
+    /* height: 100vh; */
+    background-color: #fcfcfc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 50px;
+}
+.courses__title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.courses__title h3{
+    font-family: 'Sacramento', cursive;
+    font-size: 54px;
+}
+.courses__description{
+    font-size: 16px;
+}
+.services-expo{
+    width: 100%;
+    /* height: 500px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.services-expo__card{
+    width: calc(90% / 3);
+    height: 500px;
+    margin-bottom: 50px;
+}
+.services-expo__card--img-container{
+    width: 100%;
+    height: 50%;
+}
+.services-expo__card--img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-position: 0% 60%; */
+}
+.services-expo__card--description{
+    background-color: #ececec;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.services-expo__card--description h3{
+    font-family: 'Sacramento', cursive;
+    font-size: 36px;
+}
+.services-expo__card--description p{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.services-expo__card--description a{
+    color: white;
+    width: 180px;
+    background-color: #148ec0;
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 14px;
+}
