@@ -62,7 +62,7 @@ a:hover{
 /* Styles section Hero */
 .hero{
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 100px);
     position: relative;
     z-index: 5;
     display: flex;
@@ -71,7 +71,7 @@ a:hover{
 }
 .hero__img-container{
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 100px);
     background-image: url('../resources/imgs/hero_2.jpg');
     background-size: cover;
 }
@@ -104,6 +104,7 @@ a:hover{
     font-weight: 100;
     text-align: center;
     margin-bottom: 40px;
+    padding: 0px 20px;
 }
 .hero__desc-container a{
     color: white;
@@ -116,7 +117,8 @@ a:hover{
 
 /* Styles section courses & projects*/
 .courses,
-.projects{
+.projects,
+.contact{
     width: 100%;
     /* height: 100vh; */
     background-color: #fcfcfc;
@@ -127,12 +129,14 @@ a:hover{
     padding: 40px 50px;
 }
 .courses__title,
-.projects__title{
+.projects__title,
+.contact__title{
     text-align: center;
     margin-bottom: 50px;
 }
 .courses__title h3,
-.projects__title h3{
+.projects__title h3,
+.contact__title h3{
     /* font-family: 'Sacramento', cursive; */
     font-family: 'Ubuntu', sans-serif;
     font-size: 54px;
@@ -231,7 +235,140 @@ a:hover{
 }
 
 
+/* Styles Contact me */
+.contact__title h3{
+    color: white;
+}
+
+.contact{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+    background-image: url('../resources/imgs/bg_contact.jpg');
+    background-size: cover;
+    position: relative;
+
+}
+
+.contact-background::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 15;
+}
+
+.contact__title{
+    z-index: 19;
+}
+.contact .contact-contact-container{
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+    position: relative;
+}
+.contact .contact-contact-container .contact-description{
+    width: 50%;
+    text-align: justify;
+    font-size: 16px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+}
+.contact .contact-contact-container .contact-form-container{
+    width: 80%;
+    height: auto;
+    padding: 0 30px;
+}
+.contact .contact-contact-container .contact-form-container .contact-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact .contact-contact-container .contact-form-container .contact-form .box-container{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.contact .contact-contact-container .contact-form-container .contact-form #button-container{
+    display: flex;
+    justify-content: center;
+}
+.contact .contact-contact-container .contact-form-container .contact-form .box-container.short{
+    width: 48%;
+}
+.contact .contact-contact-container .contact-form-container .contact-form label h2{
+    color: #129fea;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.contact .contact-contact-container .contact-form-container .contact-form label input,
+.contact .contact-contact-container .contact-form-container .contact-form label textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 3px solid #129fea;
+    resize: none;
+    background-color: transparent;
+    color: white;
+}
+
+.contact .contact-contact-container .contact-form-container .contact-form label input:focus,
+.contact .contact-contact-container .contact-form-container .contact-form label textarea:focus{
+    border-color: #129fea;
+    outline: none;
+}
+.contact .contact-contact-container .contact-form-container .contact-form .box-container button{
+    background-color: #148ec0;
+    border: 1px solid #148ec0;
+    color: #fff;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    cursor: pointer;
+}
+.contact .contact-contact-container .contact-form-container .contact-form .box-container button:focus,
+.contact .contact-contact-container .contact-form-container .contact-form label textarea:focus{
+    outline: none;
+}
+
+/* Styles footer */
+.footer{
+    background-color: #1b2127;
+
+    height: 50px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer .container div p a{
+    color: #148ec0
+}
+
+
+
+
 @media screen and (max-width: 768px) {
+
+    .courses__title h3,
+    .projects__title h3,
+    .contact__title h3{
+        font-size: 48px;
+    }
+
     .courses-expo__card, .projects-expo__card{
         width: calc(90% / 2);
     }
@@ -241,10 +378,25 @@ a:hover{
         font-size: 26px;
     }
 
+    .contact .contact-contact-container .contact-form-container{
+        width: 100%;
+    }
+
 }
 
 
 @media screen and (max-width: 426px) {
+
+    .hero__desc-container h1{
+        font-size: 54px;
+        padding: 0px 20px;
+    }
+
+    .courses__title h3,
+    .projects__title h3,
+    .contact__title h3{
+        font-size: 42px;
+    }
 
     .header__menu, .header__menu ul{
         display: none;
@@ -264,4 +416,7 @@ a:hover{
         font-size: 24px;
     }
 
+    .contact .contact-contact-container{
+        width: 100%;
+    }
 }
